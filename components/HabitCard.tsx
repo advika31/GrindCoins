@@ -5,14 +5,16 @@ interface HabitCardProps {
   habit: string;
   coins: number;
   isCompleted: boolean;
+  time: string;
   onProofSubmit: () => void;
 }
 
-const HabitCard: React.FC<HabitCardProps> = ({ habit, coins, isCompleted, onProofSubmit }) => {
+const HabitCard: React.FC<HabitCardProps> = ({ habit, coins, isCompleted, time, onProofSubmit }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.habitName}>{habit}</Text>
       <Text style={styles.coins}>+{coins} GC</Text>
+      <Text style={styles.time}>🕒 {time}</Text>
       <TouchableOpacity
         onPress={onProofSubmit}
         disabled={isCompleted}
@@ -61,6 +63,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: '600',
   },
+  time: {
+    fontSize: 14,
+    color: '#999',
+    marginVertical: 4,
+  },
+  
 });
 
 export default HabitCard;

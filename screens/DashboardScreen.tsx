@@ -20,8 +20,8 @@ type GoalType = 'daily' | 'weekly' | 'monthly';
 
 const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
   const habits = [
-    { habit: 'Meditation', coins: 15, isCompleted: false },
-    { habit: 'Gym', coins: 30, isCompleted: true },
+    { habit: 'Meditation', coins: 15, isCompleted: false, time: '10 mins' },
+    { habit: 'Gym', coins: 30, isCompleted: true, time: '45 mins' },
   ];
 
   const [goals, setGoals] = useState<{ [key in GoalType]: string }>({
@@ -81,6 +81,7 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
       habit={item.habit}
       coins={item.coins}
       isCompleted={item.isCompleted}
+      time={item.time}
       onProofSubmit={() => navigation.navigate('Proof')}
     />
   )}
