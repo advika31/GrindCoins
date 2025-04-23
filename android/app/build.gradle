@@ -106,16 +106,16 @@ android {
         }
     }
 
-    flavorDimensions "react-native-camera"
-    productFlavors {
-        general {
-            dimension "react-native-camera"
-        }
-        // OR
-        // mlkit {
-        //     dimension "react-native-camera"
-        // }
-    }
+    // flavorDimensions "react-native-camera"
+    // productFlavors {
+    //     general {
+    //         dimension "react-native-camera"
+    //     }
+    //     OR
+    //     mlkit {
+    //         dimension "react-native-camera"
+    //     }
+    // }
 }
 
 dependencies {

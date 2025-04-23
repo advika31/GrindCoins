@@ -1,7 +1,6 @@
-// navigation/navigationTypes.ts
 export type RootStackParamList = {
     Dashboard: undefined;
-    // Proof: undefined;
+    Proof: undefined;
     Login: undefined;
     Rewards: { 
       userCoins: number; 

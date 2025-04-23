@@ -46,7 +46,7 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
 
       <WalletOverview coins={150} xp={220} level={3} />
 
-      {/* {habits.map((h, idx) => (
+      {habits.map((h, idx) => (
         <HabitCard
           key={idx}
           habit={h.habit}
@@ -54,7 +54,7 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
           isCompleted={h.isCompleted}
           onProofSubmit={() => navigation.navigate('Proof')}
         />
-      ))} */}
+      ))}
 
       {goalTypes.map((type) => (
         <GoalCard
@@ -92,9 +92,9 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
       />
 
       <View style={styles.actions}>
-        {/* <TouchableOpacity style={[styles.button, { backgroundColor: '#53D1A2' }]} onPress={() => navigation.navigate('Proof')}>
+        <TouchableOpacity style={[styles.button, { backgroundColor: '#53D1A2' }]} onPress={() => navigation.navigate('Proof')}>
           <Text style={styles.buttonText}>Submit Proof</Text>
-        </TouchableOpacity> */}
+        </TouchableOpacity>
 
         <TouchableOpacity
           style={[styles.button, { backgroundColor: '#7067F0' }]}

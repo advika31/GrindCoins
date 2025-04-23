@@ -5,6 +5,7 @@ import LoginScreen from './screens/LoginScreen';
 import DashboardScreen from './screens/DashboardScreen';
 import ProofScreen from './screens/ProofScreen';
 import RewardsScreen from './screens/RewardsScreen';
+import GoalScreen from './screens/AddGoalScreen';
 import { RootStackParamList } from './navigation/navigationTypes';
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -16,6 +17,7 @@ export default function App() {
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Dashboard" component={DashboardScreen} />
         <Stack.Screen name="Proof" component={ProofScreen} />
+        <Stack.Screen name="Goal" component={GoalScreen} />
         <Stack.Screen
           name="Rewards"
           component={RewardsScreen}
