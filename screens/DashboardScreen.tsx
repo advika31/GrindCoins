@@ -29,8 +29,14 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
     weekly: '',
     monthly: '',
   });
-    const goalTypes: GoalType[] = ['daily', 'weekly', 'monthly'];
+  const goalTypes: GoalType[] = ['daily', 'weekly', 'monthly'];
 
+  const [completedGoals, setCompletedGoals] = useState<{ [key in GoalType]: boolean }>({
+    daily: false,
+    weekly: false,
+    monthly: false,
+  });
+  
   useEffect(() => {
     const loadGoals = async () => {
       const storedGoals = await AsyncStorage.getItem('userGoals');
@@ -55,8 +61,13 @@ const DashboardScreen = ({ navigation }: DashboardScreenProps) => {
           key={type}
           goal={goals[type]}
           type={type}
-          completed={false}
-          onToggleComplete={() => {}}
+          completed={completedGoals[type]}
+          onToggleComplete={() => {
+            setCompletedGoals((prev) => ({
+              ...prev,
+              [type]: !prev[type],
+            }));
+          }}
         />
       ))}
 
